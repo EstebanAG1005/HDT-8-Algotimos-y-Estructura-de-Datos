@@ -103,16 +103,6 @@ public class Main {
             System.out.println("Padecimientos:" + symptoms);
             System.out.println("Prioridad:" + priority);
     
-            // Added an easter egg
-            if(symptoms.equals(" COVID-19")) {
-                System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!ADVERTENCIA!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-                System.out.println("                        Este paciente padece Coronavirus, \n" +
-                        "          se recomienda enviarlo inmediatamente a un hospital designado" );
-                System.out.println();
-                System.out.println("                              No ha contagiado a nadie");
-                System.out.println("     Segun el analisis por inteligencia artificial, el paciente se curara en 3 dias");
-            }
-    
             System.out.println("-----------------------------------------------------------------------------------------");
             System.out.println();
             // Waits for confirmation that the doctor is finished
