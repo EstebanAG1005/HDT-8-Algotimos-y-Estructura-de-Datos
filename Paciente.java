@@ -1,55 +1,61 @@
+/**
+ * Clase Paciente
+ * HDT#8 - Algoritmos y Estructura de Datos
+ * Ultima modificacion: 19/04/2021
+ * @author Esteban Aldana Guerra 20591
+ */
+
 public class Paciente implements Comparable<Paciente>{
-    String patientName;
-    String symptoms;
-    String priority;
-
+    String PacienteN;
+    String Sintomas;
+    String Prioridad;
     /**
-     * Paciente constructor, returns a patient with the needed information
-     * @param patientName name of the patient
-     * @param  symptoms symptoms he or she is presenting
-     * @param  priority priority in the queue
+     * Regresa informacion del paciente
+     * @param PacienteN Nombre del paciente 
+     * @param Sintomas Sintomas que presenta el paciente 
+     * @param Prioridad Prioridad en Cola
      */
-    Paciente(String patientName, String symptoms, String priority) {
-        this.patientName = patientName;
-        this.symptoms = symptoms;
-        this.priority = priority;
+    Paciente(String PacienteN, String Sintomas, String Prioridad) {
+        this.PacienteN = PacienteN;
+        this.Sintomas = Sintomas;
+        this.Prioridad = Prioridad;
     }
 
-    /**
-     * Compares the priority of patients
-     * @param otherPatient patient to be compared to
-     */
+     /**
+      * Compara prioridades
+      *@param otroPaciente paciente comparado
+      */
     @Override
-    public int compareTo(Paciente otherPatient) {
-        if(this.priority.compareTo(otherPatient.priority) > 0) {
-            return 1;   // Patient has less priority
-        } else if (this.priority.compareTo(otherPatient.priority) < 0) {
-            return -1;  // Patient has more priority
+    public int compareTo(Paciente otroPaciente) {
+        if(this.Prioridad.compareTo(otroPaciente.Prioridad) > 0) {
+            return 1;   // paciente con menos prioridad
+        } else if (this.Prioridad.compareTo(otroPaciente.Prioridad) < 0) {
+            return -1;  // paciente tiene mas prioridad
         }
-        return 0;   // Patient has equal priority
+        return 0;   // paciente tiene misa prioridad
     }
 
     /**
-     * Gets the name of the patient
-     * @return name
+     * nombre de paciente
+     * @return nombre del paciente 
      */
-    public String getPatientName() {
-        return patientName;
+    public String getPacienteN() {
+        return PacienteN;
     }
 
     /**
-     * Gets the symptoms of the patient
-     * @return symptoms
+     * Sintomas del paciente
+     * @return Sintomas
      */
-    public String getSymptoms() {
-        return symptoms;
+    public String getSintomas() {
+        return Sintomas;
     }
 
     /**
-     * Gets the priority of the patient
-     * @return priority
+     * Prioridad del paciente 
+     * @return Prioridad
      */
-    public String getPriority() {
-        return priority;
+    public String getPrioridad() {
+        return Prioridad;
     }
 }
