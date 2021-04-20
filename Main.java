@@ -136,7 +136,7 @@ public class Main {
             String nombre = patient.getPacienteN();
             String sintomas = patient.getSintomas();
             String prioridad = patient.getPrioridad();
-
+ 
             /*
              * Imprime la informacion del paciente
              */
