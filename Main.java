@@ -53,7 +53,6 @@ public class Main {
                          */
                     } catch (Exception E) {
                         System.out.println("Hubo un error al leer el documento");
-                        System.out.println("Revise que tenga el documento 'pacientes.txt'");
                     }
 
                     /*
