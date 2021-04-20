@@ -118,7 +118,9 @@ public class VectorHeap<E extends Comparable<E>> implements PriorityQueue<E>
 		if (data.size() > 1) pushDownRoot(0);
 		return minVal;
 	}
-
+	/*
+	*Metodos de la interfaz de PriorityQueue
+	 */
     @Override
     public boolean isEmpty() {
         if(data.size() == 0) {

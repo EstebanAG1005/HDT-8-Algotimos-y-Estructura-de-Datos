@@ -24,12 +24,12 @@ public class Main {
             while (salir) {
                 try {
                     //Menu
+                    System.out.println(" ");
                     System.out.println("---------------------------------- Hoja de Trabajo #8 -----------------------------------");
                     System.out.println(" Bienvenido al Programa, Por favor Seleccione que tipo de implementacion desea realizar: ");
                     System.out.println("1. Implementacion de VectorHeap con PriorityQueue");
                     System.out.println("2. Implementacion de JCF");
                     System.out.println("3. Salir");
-                    System.out.println("-----------------------------------------------------------------------------------------");
                     op = scan.nextInt();
 
                     /*
@@ -43,8 +43,8 @@ public class Main {
                          * Se guardan a los pacientes encontrados
                          */
                         while ((line = reader.readLine()) != null) {
-                            String patientIntel[] = line.split(",");
-                            Paciente patient = new Paciente(patientIntel[0], patientIntel[1], patientIntel[2]);
+                            String Info [] = line.split(",");
+                            Paciente patient = new Paciente(Info[0], Info[1], Info[2]);
                             Data.add(patient);
                         }
 
@@ -52,50 +52,50 @@ public class Main {
                          * Si no se encuentra el documento tira error
                          */
                     } catch (Exception E) {
-                        System.err.println("Hubo un error al leer el documento");
-                        System.err.println("Revise que tenga el documento 'pacientes.txt'");
+                        System.out.println("Hubo un error al leer el documento");
+                        System.out.println("Revise que tenga el documento 'pacientes.txt'");
                     }
 
                     /*
                      * Si selecciona 1, Se hace la implementacion con VectorHeap
                      */
                     if (op == 1) {
-                        System.out.println("Utilizando VectorHeap con PriorityQueue");
-                        VectorHeap<Paciente> patientHeap = new VectorHeap<>();  // Using VectorHeap with PriorityQueue
+                        System.out.println("Utilizando VectorHeap con PriorityQueue\n");
+                        VectorHeap<Paciente> Heap = new VectorHeap<>();  // Using VectorHeap with PriorityQueue
 
                         /*
                          * Añade los pacientes al heap
                          */
                         for (Paciente datum : Data) {
-                            patientHeap.add(datum);
+                            Heap.add(datum);
                         }
 
                         /*
                          * Regresa a los pacientes ordenados por prioridad
                          */
-                        while (patientHeap.size() > 0) {
-                            Paciente currentPatient = patientHeap.remove();
-                            attendPatient(currentPatient);
+                        while (Heap.size() > 0) {
+                            Paciente actual = Heap.remove();
+                            Atendiendo(actual);
                         }
 
                         /*
                          * Si selecciona 2, Se hace implementación de JCF
                          */
                     } else if (op == 2) {
-                        System.out.println("Utilizando Java Collections Framework");
+                        System.out.println("Utilizando JCF\n");
 
                         /*
                          * Añade los pacientes a la cola
                          */
                         // Using JCF
-                        PriorityQueue<Paciente> patientQueue = new PriorityQueue<>(Data);
+                        PriorityQueue<Paciente> Cola = new PriorityQueue<>(Data);
 
                         /*
                          * Regresa a los pacientes ordenados por prioridad
                          * */
-                        while (patientQueue.size() > 0) {
-                            Paciente currentPatient = patientQueue.remove();
-                            attendPatient(currentPatient);
+                        while (Cola.size() > 0) {
+                            Paciente actual = Cola.remove();
+                            Atendiendo(actual);
                         }
                         /*
                          * Si selecciona 3, Termina el Programa
@@ -124,7 +124,7 @@ public class Main {
         /**
          * Method that displays the current patient and waits for the next one
          */
-        public static void attendPatient(Paciente patient) {
+        public static void Atendiendo(Paciente paciente) {
     
             /*
              *Scan Para enter
@@ -133,22 +133,20 @@ public class Main {
             /*
              * Informacion del paciente
              */
-            String nombre = patient.getPacienteN();
-            String sintomas = patient.getSintomas();
-            String prioridad = patient.getPrioridad();
+            String nombre = paciente.getPacienteN();
+            String sintomas = paciente.getSintomas();
+            String prioridad = paciente.getPrioridad();
  
             /*
              * Imprime la informacion del paciente
              */
-            System.out.println("-----------------------------------------------------------------------------------------");
-            System.out.println("Paciente a Atender:");
-            System.out.println("Nombre: " + nombre);
+            System.out.println("Paciente a Atender: ");
+            System.out.println("Nombre:" + nombre);
             System.out.println("Sintomas:" + sintomas);
             System.out.println("Prioridad:" + prioridad);
-            System.out.println("-----------------------------------------------------------------------------------------");
-            System.out.println();
+            System.out.println(" ");
             /*
-             * Cuando muestra la informacion con enter pasa al siguiente paciente
+             * Cuando muestra la informacion, con enter pasa al siguiente paciente
              */
             System.out.println("Presione enter para continuar");
             next.nextLine();
