@@ -1,3 +1,10 @@
+/**
+ * Clase Main
+ * HDT#8 - Algoritmos y Estructura de Datos
+ * Ultima modificacion: 19/04/2021
+ * @author Esteban Aldana Guerra 20591
+ */
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
@@ -15,8 +22,7 @@ public class Main {
             while (salir) {
                 try {
                     // Prints the main menu by default, JCF implementation is used
-                    System.out.println("-----------------Hoja de Trabajo #8 --------------------------------");
-                    System.out.println("-----------------------------------------------------------------------------------------");
+                    System.out.println("---------------------------------- Hoja de Trabajo #8 -----------------------------------");
                     System.out.println(" Bienvenido al Programa, Por favor Seleccione que tipo de implementacion desea realizar: ");
                     System.out.println("1. Implementacion de VectorHeap con PriorityQueue");
                     System.out.println("2. Implementacion de JCF");
@@ -106,7 +112,7 @@ public class Main {
             System.out.println("-----------------------------------------------------------------------------------------");
             System.out.println();
             // Waits for confirmation that the doctor is finished
-            System.out.println("Presione enter cuando desee atender al siguiente");
+            System.out.println("Presione enter para continuar");
             next.nextLine();
         }
     }

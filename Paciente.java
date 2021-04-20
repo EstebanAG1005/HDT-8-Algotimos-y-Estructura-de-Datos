@@ -14,6 +14,9 @@ public class Paciente implements Comparable<Paciente>{
      * @param PacienteN Nombre del paciente 
      * @param Sintomas Sintomas que presenta el paciente 
      * @param Prioridad Prioridad en Cola
+     * Referencias:
+     * https://cs.colby.edu/courses/F17/cs231/LectureNotes/Topic09_PriorityQueues.pdf
+     * https://beginnersbook.com/2013/12/java-string-compareto-method-example/#:~:text=The%20Java%20String%20compareTo(),returns%20positive%20or%20negative%20value.
      */
     Paciente(String PacienteN, String Sintomas, String Prioridad) {
         this.PacienteN = PacienteN;

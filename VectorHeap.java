@@ -1,3 +1,11 @@
+/**
+ * Clase VectorHeap
+ * HDT#8 - Algoritmos y Estructura de Datos
+ * Ultima modificacion: 19/04/2021
+ * @author Esteban Aldana Guerra 20591
+ * Referencia:
+ * Ejemplo dado en clase, que se encuentra en modulos de Canvas
+ */
 import java.util.Vector;
 
 public class VectorHeap<E extends Comparable<E>> implements PriorityQueue<E>

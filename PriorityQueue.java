@@ -1,3 +1,12 @@
+/**
+ * Clase PriorityQueue
+ * HDT#8 - Algoritmos y Estructura de Datos
+ * Ultima modificacion: 19/04/2021
+ * @author Esteban Aldana Guerra 20591
+ * Referencia:
+ * Ejemplo dado en clase, que se encuentra en modulos de Canvas
+ */
+
 public interface PriorityQueue<E extends Comparable<E>>
 {
 	public E getFirst();
