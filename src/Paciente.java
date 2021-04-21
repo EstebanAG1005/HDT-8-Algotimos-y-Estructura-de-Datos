@@ -8,7 +8,7 @@
  * https://beginnersbook.com/2013/12/java-string-compareto-method-example/#:~:text=The%20Java%20String%20compareTo(),returns%20positive%20or%20negative%20value.
  */
 
-public class Paciente implements Comparable<Paciente>{
+public class DPaciente implements Comparable<Paciente>{
     String PacienteN;
     String Sintomas;
     String Prioridad;

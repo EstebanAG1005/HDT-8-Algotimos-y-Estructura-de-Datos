@@ -59,7 +59,7 @@ public class Main {
                      * Si selecciona 1, Se hace la implementacion con VectorHeap
                      */
                     if (op == 1) {
-                        System.out.println("Utilizando VectorHeap con PriorityQueue\n");
+                        System.out.println("Implementacion de VectorHeap con PriorityQueue\n");
                         VectorHeap<Paciente> Heap = new VectorHeap<>();  // Using VectorHeap with PriorityQueue
 
                         /*
@@ -81,24 +81,29 @@ public class Main {
                          * Si selecciona 2, Se hace implementación de JCF
                          */
                     } else if (op == 2) {
-                        System.out.println("Utilizando JCF\n");
+                        System.out.println("Implementacion de JCF\n");
 
                         /*
                          * Añade los pacientes a la cola
                          */
                         // Using JCF
-                        PriorityQueue<Paciente> Cola = new PriorityQueue<>(Data);
+                        PriorityQueue<Paciente> Cola = new PriorityQueue<Paciente>();
 
                         /*
-                         * Regresa a los pacientes ordenados por prioridad
-                         * */
-                        while (Cola.size() > 0) {
+                            Añade los pacientes a la colaD
+                         */
+                        for(int i = 0; i < Data.size(); i++) {
+                            Cola.add(Data.get(i));
+                        }
+
+                        /*
+                            Regresa al paciente segun la prioridad
+                         */
+                        while(Cola.size() > 0) {
                             Paciente actual = Cola.remove();
                             Atendiendo(actual);
                         }
-                        /*
-                         * Si selecciona 3, Termina el Programa
-                         */
+
                     } else if (op == 3) {
                         System.out.println("Gracias por usar el programa, Que tenga un buen dia :)");
                         System.exit(0);

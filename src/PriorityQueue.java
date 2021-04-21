@@ -7,7 +7,7 @@
  * Ejemplo dado en clase, que se encuentra en modulos de Canvas
  */
 
-public interface PriorityQueue<E extends Comparable<E>>
+public interface DPriorityQueue<E extends Comparable<E>>
 {
 	public E getFirst();
 	// pre: !isEmpty()
